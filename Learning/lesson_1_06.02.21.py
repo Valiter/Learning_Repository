@@ -29,10 +29,11 @@ while ProgActiv in yes:
             print(per_int)
             print(per_float)
             print(per_bool)
-            per_str = input('Введите любые символы в строчку: ')
-            per_int = int(input('Введите целое число: '))
-            per_float = float(input('Введите число с плавающей точкой: '))
-            per_bool = bool(input('Введите (True / False): '))
+            if tt == 1:
+                per_str = input('Введите любые символы в строчку: ')
+                per_int = int(input('Введите целое число: '))
+                per_float = float(input('Введите число с плавающей точкой: '))
+                per_bool = bool(input('Введите (True / False): '))
 # Над переписать через %d/%f или через f строку. Но пока и так сойдет.
 # И еще не ясно как получить (3719 сек) вывод в виде 01:01:59
 # Вообще, если пользователь введет любой тип данных, то программа будет работать...
