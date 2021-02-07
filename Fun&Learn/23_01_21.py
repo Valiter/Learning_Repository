@@ -18,3 +18,5 @@ elif int(NumberOfChoise) == 2:
 else:
     print('Неправильный символ в ответе.')
     print('Програма закончена.')
+
+print('12412451')
