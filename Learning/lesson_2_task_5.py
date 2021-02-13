@@ -1,13 +1,17 @@
-# Доделать.
-list = [10, 7, 6, 4, 2]
-number = int(input("Введите целое число: "))
-try:
-    print(list.index(number))
-except:
-    print("Числа нет в списке.")
-finally:
-    l_len = len(list)
-    search_index = l_len / 2
-    if list[search_index] < number:
-    print(list.insert(search_index, number))
-    print(list)
+a = "да"
+while a == "да":
+    list = [10, 7, 6, 4, 2]
+    print("Первоначальный вариант списка: " + str(list))
+
+    number = int(input("Введите целое число, которое мы встамим в список: "))
+    index = 0
+# Почему я не могу использовать el в качестве счетчика?
+# Почему я не могу использовать команду list.insert() внутри for?
+    for el in list:
+        if number <= el:
+            index += 1
+    list.insert(index, number)
+# Воспользовался методом .lower , но нифига, судя по всму, не понимаю куда его надо было пихать.
+    # Метод тыка - наше все.
+    print("Окончательный вариант списка: " + str(list))
+    a = input("Продолжить? Ответ: ").lower()
