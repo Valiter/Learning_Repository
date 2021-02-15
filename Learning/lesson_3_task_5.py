@@ -10,7 +10,7 @@ while work == True:
         try:
             sum_num = int(sum_num) + int(el)
         except:
-            print(f"Symbol was found: {el}.")
+            print(f"Symbol was found: {el}.\nFinishing results:")
             work = False
     print(list_of_numbers)
     print(sum_num)
