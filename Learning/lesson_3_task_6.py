@@ -3,7 +3,7 @@
 # Не понимаю ошибки.
 
 ls = []
-stop = int(1)
+stop = ("нет")
 i = 0
 answ_list = ["почистить", "да", "конечно", "1", "true"]
 
@@ -14,12 +14,11 @@ def int_func(strng):
                 global stop
                 stop = 0
                 break
-            else:
-                ls.append(el.title())
-        except:
-            print("***" * 10)
 
-while stop == 1:
+        except:
+            ls.append(el.title())
+
+while stop == ("нет"):
     strng = input("Введите слово или слова: \n")
     print("HINT!\n0 в списке слов заканчивает выполнение программы.")
     int_func(strng)
@@ -28,5 +27,7 @@ while stop == 1:
     if i == 2:
         print("Почистить список?")
         answer = input("Ответ: ").lower()
-        if answer == answ_list:
+        if answer in answ_list:
             ls.clear()
+            i = 0
+        stop = input("Закончить программу?\n").lower
