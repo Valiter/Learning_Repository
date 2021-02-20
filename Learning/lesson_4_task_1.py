@@ -7,7 +7,7 @@
 
 
 def money_to_pay(*args):
-
+   print()
 
 
 work_time = float(input("Количество проработанных часов: "))
