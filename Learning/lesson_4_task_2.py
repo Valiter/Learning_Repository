@@ -5,3 +5,23 @@
 Результат: [12, 44, 4, 10, 78, 123].
 """
 
+# Говнокод-1
+def shit_code():
+    list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+    cor = [12, 44, 4, 10, 78, 123]
+    n = 0
+    res_list = []
+    tr = True
+    while tr == True:
+        print(f"Берем индекс элемента списка - {n}.")
+        try:
+            first_el = list[n]
+            n += 1
+            second_el = list[n]
+            print(f"Производим сравнение элементов {first_el} и {second_el}")
+            if first_el < second_el:
+                res_list.append(list[n])
+        except:
+            print(f"Список {list} закончился.")
+            tr = False
+    print(f"Итоговый список - {res_list}")
