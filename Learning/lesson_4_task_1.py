@@ -3,13 +3,13 @@
 В расчете необходимо использовать формулу: (выработка в часах * ставка в час) + премия.
 Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 """
-
-
-
-def money_to_pay(*args):
-   print()
-
+# Мне все в функцию надо было запихнуть или такой вариант тоже вполне себе нормальный?
+def money_to_pay(money_h, h_work, prim):
+   result_w = (money_h * h_work) + prim
+   return result_w
 
 work_time = float(input("Количество проработанных часов: "))
 money_per_hour = float(input("Ставка в час: "))
 prime = float(input("Премия: "))
+
+print(money_to_pay(work_time, money_per_hour, prime))
