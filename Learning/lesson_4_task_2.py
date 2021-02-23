@@ -7,8 +7,8 @@
 
 from random import randrange
 
-# Говнокод-1
-def shit_code(list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]):
+
+def list_analyser(list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]):
     n = 0
     res_list = []
     tr = True
@@ -26,13 +26,15 @@ def shit_code(list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]):
             tr = False
     return (f"Итоговый список - {res_list}")
 
-# Говнокод-2
-def good_code(height, length):
+
+def list_generator(height, length):
     list = [randrange(int(height)) for _ in range(int(length))]
     print("Список сгенерирован.")
     return list
 
-height = input("Введите численный потолок: ")
-length = input("Введите длинну списка: ")
-print(good_code(height, length))
-print(shit_code(good_code(height, length)))
+
+if __name__ == '__main__':
+    height = input("Введите численный потолок: ")
+    length = input("Введите длинну списка: ")
+    print(list_generator(height, length))
+    print(list_analyser(list_generator(height, length)))
