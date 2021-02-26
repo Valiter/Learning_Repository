@@ -5,11 +5,12 @@
 """
 
 
-
 def money_to_pay(*args):
-   print()
+    result = (work * time) + prime
+    return result
 
 
 work_time = float(input("Количество проработанных часов: "))
 money_per_hour = float(input("Ставка в час: "))
 prime = float(input("Премия: "))
+money_to_pay(work_time, money_per_hour, prime)

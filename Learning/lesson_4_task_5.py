@@ -5,3 +5,15 @@
 Подсказка: использовать функцию reduce().
 """
 
+
+def sum_and_list():
+    sm = 0
+    lst = []
+    for el in range(100, 1001):
+        lst.append(el)
+        sm = sm + el
+    return lst, sm
+
+
+print(sum_and_list())
+# Вообще работает, но мне не нравится.
