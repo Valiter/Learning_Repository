@@ -29,6 +29,5 @@ def b_iter(lst):
             return True
 
 
-
 lst = a_iter()
 b_iter(lst)

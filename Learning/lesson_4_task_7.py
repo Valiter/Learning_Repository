@@ -11,7 +11,6 @@ def factorial(num):
     while num > 0:
         fact = fact * num
         num -= 1
-
     return fact
 
 

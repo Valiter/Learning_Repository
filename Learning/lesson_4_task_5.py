@@ -16,4 +16,3 @@ def sum_and_list():
 
 
 print(sum_and_list())
-# Вообще работает, но мне не нравится.

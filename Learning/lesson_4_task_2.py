@@ -24,7 +24,7 @@ def list_analyser(list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]):
         except:
             print(f"Список {list} закончился.")
             tr = False
-    return (f"Итоговый список - {res_list}")
+    return res_list
 
 
 def list_generator(height, length):
