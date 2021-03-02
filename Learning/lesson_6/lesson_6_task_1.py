@@ -1,10 +1,7 @@
-from time import time
+from time import sleep
 
-class TrafficLight(time):
-    __color = "red"
-    time_for_green = time
+
+class TrafficLight:
+    __color =
 
     def running(self):
-        print(TrafficLight.__color)
-
-obj = TrafficLight()
