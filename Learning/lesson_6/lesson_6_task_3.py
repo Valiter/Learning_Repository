@@ -9,6 +9,7 @@ name, surname, position (должность), income (доход).
 проверить значения атрибутов, вызвать методы экземпляров).
 """
 
+
 class Worker:
     # Atributes
     def __init__(self, name, surname, position, wage, bonus):
@@ -16,6 +17,7 @@ class Worker:
         self.surname = surname
         self.position = position
         self._income = {"wage": wage, "bonus": bonus}
+
 
 class Posision(Worker):
     def get_full_name(self):
@@ -28,7 +30,9 @@ class Posision(Worker):
         print(sum_3)
         return sum_3
 
+
 name = input(f"Name: ")
+
 surname = input(f"Surname: ")
 position = input(f"Position: ")
 wage = input(f"Wage: ")

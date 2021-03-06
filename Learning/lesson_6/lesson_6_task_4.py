@@ -15,6 +15,7 @@
 Выполните вызов методов и также покажите результат.
 """
 
+
 class Car:
     # Atributes
     def __init__(self, speed, color, name, is_police):
@@ -41,13 +42,16 @@ class TownCar(Car):
         if self.speed > 60:
             print(f"Warning {self}! Your speed is to big!")
 
+
 class SportCar(Car):
     pass
+
 
 class WorkCar(Car):
     def show_speed(self):
         if self.speed > 40:
             print(f"Warning {self}! Your speed is to big!")
+
 
 class PoliceCar(Car):
     pass
