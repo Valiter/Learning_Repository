@@ -40,6 +40,33 @@
 Или, количество ячеек клетки равняется 15,
 количество ячеек в ряду — 5. Тогда метод make_order() вернет строку: *****\n*****\n*****.
 """
+# сложение (__add__()), вычитание (__sub__()), умножение (__mul__()), деление (__truediv__())
 
 
-class cage:
+class Cell:
+    def __init__(self, cell_count):
+        self.cell_count = cell_count
+
+    def make_order(self, rows):
+        bufstr = "\n".join(["*" * rows for _ in range(self.cell_count // rows)])
+        return f'{bufstr}\n{"*" * (self.cell_count % rows)}'
+
+    def __add__(self, other):
+        return str(self.cell_count + other.cell_count)
+
+    def __add__(self, other):
+        return Cell(self.cell_count - other.cell_count)
+
+    def __sub__(self, other):
+        return Cell(self.cell_count - other.cell_count) if self.cell_count - other.cell_count > 0 \
+            else "Error"
+
+    def __mul__(self, other):
+        return Cell(self.cell_count * other.cell_count)
+
+    def __truediv__(self, other):
+        return Cell(self.cell_count / other.cell_count)
+
+
+a_cell = Cell(53)
+print(a_cell.make_order(5))
