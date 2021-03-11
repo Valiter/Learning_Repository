@@ -31,11 +31,16 @@ class Matrix:
             c.append([])
             for j in range(len(self.lists[0])):
                 c[i].append(self.lists[i][j] + other.lists[i][j])
-        return "\n".join(map(str, c))
+        return Matrix(c)
+        # return "\n".join(map(str, c))
 
 
-a = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]
-b = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]
+a = [[1, 2, 3, 4],
+     [1, 2, 3, 4],
+     [1, 2, 3, 4]]
+b = [[1, 2, 3, 4],
+     [1, 2, 3, 4],
+     [1, 2, 3, 4]]
 
 matrix_1 = Matrix(a)
 matrix_2 = Matrix(b)

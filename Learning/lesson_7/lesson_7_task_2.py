@@ -14,10 +14,46 @@
 Проверить на практике полученные на этом уроке знания:
 реализовать абстрактные классы для основных классов проекта, проверить на практике работу декоратора @property.
 """
+from abc import ABC, abstractmethod
 
 
-class clothes:
-    def __init__(self, size, height):
-        self.size = size
+class Clothes(ABC):
+    @staticmethod
+    def count_total(cloth_list):
+        return sum(clothes.consumption for clothes in cloth_list)
+# Порядок декораторов имеет значение.
+    @property
+    @abstractmethod
+    def consumption(self):
+        pass
+
+    def __add__(self, other):
+        return self.consumption + other.consumption
+
+
+class Coat(Clothes):
+    def __init__(self, height):
         self.height = height
 
+    @property
+    def consumption(self):
+        print({round(self.height / 6.5) + 0.5})
+        return round(self.height / 6.5) + 0.5
+
+
+class Costume(Clothes):
+    def __init__(self, param):
+        self.param = param
+
+    @property
+    def consumption(self):
+        print({round(2 * self.param + 0.3) / 0.5})
+        return round(2 * self.param + 0.3) / 0.5
+
+
+coat1 = Coat(10)
+coat2 = Coat(20)
+costume = Costume(50)
+costume = Costume(30)
+clothes = [coat1, coat2, costume]
+print(Clothes.count_total(clothes))
