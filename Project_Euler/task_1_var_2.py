@@ -8,7 +8,6 @@ from time import time
 
 def sum_del_en_3_5(low_num=0, hight_num=1000):
     start = time()
-    ls = []
     sum_num = 0
     for el in range(low_num, hight_num):
         if el % 3 == 0 or el % 5 == 0:
