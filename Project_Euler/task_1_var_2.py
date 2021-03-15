@@ -18,6 +18,7 @@ def sum_del_en_3_5(low_num=0, hight_num=1000):
     print(f"\nWorking time is {tm}")
     return f"Start number is {low_num};\nEnd number is {hight_num}\nSum of all numbers is {sum_num}."
 
+
 low_num = input("Start number: ")
 hight_num = input("End number: ")
 print(sum_del_en_3_5(hight_num=int(hight_num), low_num=int(low_num)))
