@@ -27,4 +27,4 @@ class Data:
 
 data = Data("10-01-2020")
 data.validation(data)
-print(Data.number(data))
+print(f"Data.number(data)")
